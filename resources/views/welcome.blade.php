@@ -19,9 +19,15 @@
                         <a class="btn btn-success" href="/ingredient-list/{{$item->id}}">Details</a>
                     </td>
                     <td>
-                        <form action="/deleteIngredient" method="POST">
+                        <form action="/deleteIngredient/{{$item->id}}" method="POST">
                             @csrf
                             <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/updateIngredient/{{$item->id}}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-info">Update</button>
                         </form>
                     </td>
                 </tr>

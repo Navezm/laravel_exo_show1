@@ -9,9 +9,9 @@
             <div class="card-body">
                 <h5 class="card-title">{{$show->name}}</h5>
                 <p class="card-text">{{$show->quantity}}gr</p>
-                <form action="/deleteIngredient" method="POST">
+                <form action="/deleteIngredient/{{$show->id}}" method="POST">
                     @csrf
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button href="/" type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </div>
         </div>
